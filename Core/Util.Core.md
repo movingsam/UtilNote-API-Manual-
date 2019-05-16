@@ -75,3 +75,23 @@ Util核心类库
     -   不写两个泛型会默认使用Guid作为Id,PartentId
 
     -   实现接口IParentId\<TParentId\> IPath IEnabled ISortId
+
+    -   实现接口IPath Path为树形结构的当前的路径Util已经将Path的生成写了一个实现在TreeEntityBase中 InitPath()
+
+    -   IEnabled 是否启用接口 属性Enabled为True时开启 False失败
+
+    -   ISortId 是排序时用的字段
+
+-   查询相关内容放在Queries文件夹中
+
+    -   查询条件放在Criterias文件夹中
+
+        -   AndCriteria 查询条件 "与（And）"
+
+            -   实现了抽象类ICriteria查询抽象接口需要带上查询相关实体接口泛型
+
+            -   构造函数需要传入两个Expression<Func<TEntity,bool>>型的参数 再利用Util封装的表达式树静态工具类Extensions.And来拼接两个Lambda
+
+            -   同时ICriteria提供了一个GetPredicate()方法来获取条件 所以这里需要实现 那么需要一个中间变量来存放拼接的Lambda 这里使用Predicate属性来接收并暴露给GetPredicate()方法
+
+    -   DateSegmentCriteria 日期范围过滤条件 - 不包含时间
