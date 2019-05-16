@@ -4,7 +4,7 @@ Util学习笔记
 
     -   Util核心部分
 
-        -   Util
+        -   [Util](https://github.com/movingsam/UtilNote-API-Manual-/blob/master/Core/Util.Core.md)
 
         -   Util.Security
 
