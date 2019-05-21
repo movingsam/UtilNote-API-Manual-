@@ -135,7 +135,7 @@
         这里使用Predicate属性来接收并暴露给GetPredicate()方法
 
 
-#####SegmentCriteriaBase 
+##### SegmentCriteriaBase 
 [SegmentCriteriaBase](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/Criterias/SegmentCriteriaBase.cs)
 
 >范围过滤条件基类 三个泛型 实现了ICriteria<TEntity>
@@ -179,7 +179,7 @@
 
     -   `new DateSegmentCriteria<AggregateRootSample, DateTime>( t => t.DateValue, _min, _max );`
 
-#####DateTimeSegmentCriteria 
+##### DateTimeSegmentCriteria 
 [DateTimeSegmentCriteria](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/Criterias/DateTimeSegmentCriteria.cs)
 >日期范围过滤条件-包含时间 
 
@@ -191,7 +191,7 @@
 
         -   `new DateTimeSegmentCriteria<AggregateRootSample, DateTime>( t => t.DateValue, _min, _max );`
 
-#####       DecimalSegmentCriteria
+##### DecimalSegmentCriteria
 [DecimalSegmentCriteria](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/Criterias/DecimalSegmentCriteria.cs)
 >Decimal范围过滤条件
 
@@ -201,9 +201,9 @@
 
     -   `new DecimalSegmentCriteria<AggregateRootSample, decimal>( t => t.DecimalValue, 1.1M, 10.1M );`
 
-#####DoubleSegmentCriteria double
+##### DoubleSegmentCriteria 
 [DoubleSegmentCriteria](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/Criterias/DoubleSegmentCriteria.cs)
->范围过滤条件 
+>double范围过滤条件 
 
 -       与Decimal过滤条件一致
 
@@ -211,7 +211,7 @@
 
     - `new DoubleSegmentCriteria<AggregateRootSample, double>( t => t.DoubleValue, 1.1, 10.1, Boundary.Neither );`
 
-#####       IntSegmentCriteria
+#####  IntSegmentCriteria
  [IntSegmentCriteria](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/Criterias/IntSegmentCriteria.cs)
 >整数范围过滤条件
 
@@ -242,7 +242,7 @@
 
     -       new OrCriteria<AggregateRootSample>( t => t.Name == "a",t => t.Name != "b" );
 
-#####ValueExpressionHelper
+##### ValueExpressionHelper
 [ValueExpressionHelper](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/Criterias/ValueExpressionHelper.cs)
 > 值表达式操作 
 
@@ -252,7 +252,7 @@
 
     -       Expression CreateDateTimeExpression( object value, Type targetType )目标类型
 
-#####Helper
+##### Helper
 [Helper](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/Internal/Helper.cs)
 > 查询工具类 
 
@@ -274,12 +274,12 @@
 
     -       返回一个IOrderedQueryable<TEntity>对象
 
-#####IPagerBase
+##### IPagerBase
 [IPagerBase](https://github.com/dotnetcore/Util/blob/master/src/Util/Domains/Repositories/IPagerBase.cs)
 > 分页基础接口 
 -       3条属性Page/PageSize/TotalCount
 
-#####IPager
+##### IPager
 [IPager](https://github.com/dotnetcore/Util/blob/master/src/Util/Domains/Repositories/IPager.cs)
 > 分页接口 
 
@@ -295,7 +295,7 @@
 
     -       GetEndNumber获取结束行数
 
-#####Pager
+##### Pager
 [Pager](https://github.com/dotnetcore/Util/blob/master/src/Util/Domains/Repositories/Pager.cs)
 >实现了IPager 
 
@@ -333,13 +333,13 @@
 
     -       当前页的最后一行
 
-#####IQueryParameter
+##### IQueryParameter
 [IQueryParameter](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/IQueryParameter.cs)
 >查询参数接口 
 
 -       Keyword搜索关键字
 
-#####QueryParameter
+##### QueryParameter
 [QueryParameter](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/QueryParameter.cs)
 >查询参数 
 
@@ -409,7 +409,7 @@
 
     -       Or( IQuery<TEntity, TKey> query ); 或连接
 
-#####Operator
+##### Operator
 [Operator](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/Operator.cs)
 > 查询操作符枚举 
 
@@ -423,7 +423,7 @@
 -   用来确认排序项
 -   可生成排序字符串
 
-#####OrderByBuilder
+##### OrderByBuilder
 [OrderByBuilder](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Queries/OrderByBuilder.cs)
 > 排序生成器
 -   内部有一个List<[OrderByItem](#OrderByItem)> _items 字段用来确认排序项
@@ -446,7 +446,7 @@
 >   ***注意事项！***
     WhereIfNotEmpty [具体注意内容查看TreeQueryParameter->WhereIfNotEmpty方法](#WhereIfNotEmpty)
 
-
+###### 
 
 
 
