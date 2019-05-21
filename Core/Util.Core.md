@@ -1,8 +1,8 @@
-#Util核心类库
+# Util核心类库
 
-##这个目录下的文件主要是应用的基础类
+## 这个目录下的文件主要是应用的基础类
 
-###定义了应用的DTO:
+### 定义了应用的DTO:
 
 
 #####   Dto应当继承自RequestBase实现接口IDto
@@ -44,12 +44,12 @@
 #####   NotNullAttribute验证不能为null 继承自参数拦截器并重写相关验证逻辑 
 [NotNullAttribute](https://github.com/dotnetcore/Util/blob/master/src/Util/Aspects/NotNullAttribute.cs)
 
-###缓存 
+### 缓存 
 
 #####   ICache缓存抽象 对应实现类CacheManager(基于IEasyCachingProvider) 
 [ICache](https://github.com/dotnetcore/Util/blob/master/src/Util/Caches/ICache.cs)
 
-###上下文 
+### 上下文 
 [Context](https://github.com/dotnetcore/Util/tree/master/src/Util/Contexts)
 
 #####   ContextFactory静态上下文工厂类  
@@ -66,7 +66,7 @@
 #####   WebContext Web请求的上下文 
 [WebContext](https://github.com/dotnetcore/Util/blob/master/src/Util/Contexts/WebContext.cs)
 
-###数据相关 
+### 数据相关 
 [Datas](https://github.com/dotnetcore/Util/tree/master/src/Util/Datas)
 
 #####   DatabaseType数据库类型枚举 
@@ -93,7 +93,7 @@
 
     -       重写!=取上面重写的==号操作符的相反值
 
-#####PersistentObjectBase 
+##### PersistentObjectBase 
 [PersistentObjectBase](https://github.com/dotnetcore/Util/blob/master/src/Util/Datas/Persistence/PersistentObjectBase.cs)
 -       持久化对象基类继承自PersistentEntityBase并带上了Version乐观锁 
 
