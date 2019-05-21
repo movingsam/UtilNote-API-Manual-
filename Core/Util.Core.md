@@ -26,7 +26,7 @@
 #####   IQueryService继承了Oprations中的所有接口 
 [IQueryService](https://github.com/dotnetcore/Util/blob/master/src/Util/Applications/IQueryService.cs)
 
-###定义了拦截器 
+### 定义了拦截器 
 [Aspects](https://github.com/dotnetcore/Util/tree/master/src/Util/Aspects)
 
 #####   InterceptorBase一个拦截器的基类 
